@@ -1,0 +1,16 @@
+SHENV_ROOT=${SHENV_ROOT:-$HOME/.shenv}
+
+if [ -f "$SHENV_ROOT"/path.sh ]; then
+  source "$SHENV_ROOT"/path.sh
+fi
+
+share_dir="$SHENV_ROOT"/share
+modules=($(ls "$share_dir"))
+
+for module in ${modules[@]}; do
+  module_dir="$share_dir/$module"
+  for file in $(ls "$module_dir"); do
+    source "$module_dir/$file"
+  done
+done
+

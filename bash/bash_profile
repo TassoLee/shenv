@@ -1,0 +1,6 @@
+SHENV_ROOT=${SHENV_ROOT:-$HOME/.shenv}
+
+if [ -f "$SHENV_ROOT"/bash/bashrc ]; then
+  source "$SHENV_ROOT"/bash/bashrc
+fi
+
