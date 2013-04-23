@@ -28,3 +28,4 @@ fi
 git clone https://github.com/TassoLee/shenv.git "$SHENV_ROOT"
 ln -s "$SHENV_ROOT"/bash/bash_profile $HOME/.bash_profile
 ln -s "$SHENV_ROOT"/bash/bashrc $HOME/.bashrc
+
