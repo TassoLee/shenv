@@ -10,6 +10,13 @@ Install the latest `shenv`
     curl -sL http://git.io/zZ0IFA | bash
 
 
+## Update
+
+Update to the latest `shenv`
+
+    shenv_update
+
+
 ## Usage
 
 Take `shenv` into effective
