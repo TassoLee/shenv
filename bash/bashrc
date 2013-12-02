@@ -14,3 +14,9 @@ for module in ${modules[@]}; do
   done
 done
 
+if [ $(which brew) ]; then
+  if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+    source "$(brew --prefix)/etc/bash_completion"
+  fi
+fi
+
