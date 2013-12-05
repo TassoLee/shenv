@@ -7,14 +7,15 @@ fi
 share_dir="$SHENV_ROOT"/share
 modules=($(ls "$share_dir"))
 
-for module in ${modules[@]}; do
+for module in "${modules[@]}"; do
   module_dir="$share_dir/$module"
-  for file in $(ls "$module_dir"); do
+  stuffs=($(ls "$module_dir"))
+  for file in "${stuffs[@]}"; do
     source "$module_dir/$file"
   done
 done
 
-if [ $(which brew) ]; then
+if [ "$(which brew)" ]; then
   if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
     source "$(brew --prefix)/etc/bash_completion"
   fi
