@@ -1,2 +1,2 @@
-[ $(which colordiff) ] && alias diff='colordiff'
+[ "$(which colordiff)" ] && alias diff='colordiff'
 

@@ -1,2 +1,2 @@
-[ $(which tree) ] && alias tree='tree -Cl'
+[ "$(which tree)" ] && alias tree='tree -Cl'
 

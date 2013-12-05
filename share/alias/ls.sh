@@ -1,11 +1,9 @@
-if [ $(uname -s) = "Darwin" ]; then
-  __LS_FLAGS="-G"
+if [ "$(uname)" = "Darwin" ]; then
+  alias ls='ls -G'
 else
-  __LS_FLAGS="--color=auto"
+  alias ls='ls --color=auto'
 fi
 
-alias ls='ls $__LS_FLAGS'
-alias sl='ls'
 alias l='ls'
 alias l.='ls -d .*'
 alias ll.='ls -ld .*'
